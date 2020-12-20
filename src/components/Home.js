@@ -5,7 +5,6 @@ import styled from 'styled-components';
 import CloudDownloadIcon from '@material-ui/icons/CloudDownload';
 
 const HomeStyles = styled.div`
-    color: white;
     width: 100%;
     min-height: calc(100vh - 150px);
     display: flex;
@@ -89,9 +88,9 @@ const HomeStyles = styled.div`
         border-radius: var(--border-radius);
         border: none;
         font-size: 0.9em;
-        /* opacity: 0%; */
-        /* animation: fade-in 1.5s ease-in 5s;
-        animation-fill-mode: forwards; */
+        opacity: 0%;
+        animation: fade-in 1.5s ease-in 5s;
+        animation-fill-mode: forwards;
         
         > * {
           margin: 0 5px;
