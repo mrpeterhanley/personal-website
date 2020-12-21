@@ -1,11 +1,23 @@
 import { createGlobalStyle } from 'styled-components';
 import regular from '../fonts/OpenSans-Regular.ttf';
+import semibold from '../fonts/OpenSans-SemiBold.ttf';
+import italic from '../fonts/OpenSans-LightItalic.ttf';
 
 const GlobalStyles = createGlobalStyle`
 
     @font-face {
         font-family: OpenSans-Regular;
         src: url(${regular});
+    }
+
+    @font-face {
+        font-family: OpenSans-SemiBold;
+        src: url(${semibold});
+    }
+
+    @font-face {
+        font-family: OpenSans-Italic;
+        src: url(${italic});
     }
 
     :root {
@@ -25,8 +37,12 @@ const GlobalStyles = createGlobalStyle`
         color: white;
     }
 
-    body {
+    .strong {
+        font-family: OpenSans-SemiBold;
+    }
 
+    .italic {
+        font-family: OpenSans-Italic;
     }
 `;
 

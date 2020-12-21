@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import GitHubIcon from '@material-ui/icons/GitHub';
+import ContactForm from './ContactForm';
 
 const ContactStyles = styled.div`
     width: 100%;
@@ -37,41 +38,13 @@ const ContactStyles = styled.div`
     a:hover {
         color: goldenrod;
     }
-
-    form {
-        display: flex;
-        flex-direction: column;
-        max-width: 400px;
-        width: 100%;
-    }
-
-    input,
-    textarea {
-        padding: 5px;
-        margin: 10px;
-        border: 0;
-        border-radius: var(--border-radius);
-    }
-
-    button {
-        background-color: var(--blue);
-        color: var(--black);
-        padding: 7px;
-        margin: 0 10px;
-        border-radius: var(--border-radius);
-        border: none;
-
-        &:hover {
-            background-color: goldenrod;
-        }
-    }
 `;
 
 export default function Contact() {
     
   return (
     <ContactStyles>
-          <h1>Contact Me</h1>
+          <h1 className="strong">Contact Me</h1>
           <p>via social media or send me a message below</p>
           <ul>
             <li>
@@ -87,19 +60,7 @@ export default function Contact() {
                 ><GitHubIcon fontSize="large" /></a>
             </li>
           </ul>
-
-          <form class="contact-form" method="POST">
-            <input type="text" id="Name" placeholder="Name" />
-            <input type="email" id="Email" placeholder="Email" />
-            <textarea
-              rows="5"
-              cols="50"
-              id="Message"
-              placeholder="Message"
-            ></textarea>
-            <p id="response"></p>
-            <button type="submit">SEND</button>
-          </form>
+          <ContactForm />
     </ContactStyles>
   )
 }

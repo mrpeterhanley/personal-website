@@ -83,14 +83,14 @@ export default function Nav() {
         />
         </li>
         {menuOpen && <>
-        <li className="hideOnDesktop"><Link to="/"><HomeIcon /></Link></li>
-        <li className="hideOnDesktop"><Link to="/">Personal Projects</Link></li>
-        <li className="hideOnDesktop"><Link to="/">Freelance Projects</Link></li>
-        <li className="hideOnDesktop"><Link to="/#pageBottom">Contact Me</Link></li>
+        <li onClick={toggleMenu} className="hideOnDesktop"><Link to="/"><HomeIcon /></Link></li>
+        <li onClick={toggleMenu} className="hideOnDesktop"><Link to="/#personalProjects">Personal Projects</Link></li>
+        <li onClick={toggleMenu} className="hideOnDesktop"><Link to="/#freelanceProjects">Freelance Projects</Link></li>
+        <li onClick={toggleMenu} className="hideOnDesktop"><Link to="/#pageBottom">Contact Me</Link></li>
         </>}
         <li className="hideOnMobile"><Link to="/"><HomeIcon /></Link></li>
-        <li className="hideOnMobile"><Link to="/">Personal Projects</Link></li>
-        <li className="hideOnMobile"><Link to="/">Freelance Projects</Link></li>
+        <li className="hideOnMobile"><Link to="/#personalProjects">Personal Projects</Link></li>
+        <li className="hideOnMobile"><Link to="/#freelanceProjects">Freelance Projects</Link></li>
         <li className="hideOnMobile"><Link to="/#pageBottom">Contact Me</Link></li>
       </ul>
     </NavStyles>

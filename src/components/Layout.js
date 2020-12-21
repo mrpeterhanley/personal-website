@@ -14,6 +14,7 @@ const LayoutStyles = styled.div`
 
   .children {
       flex: 1;
+      padding: 10px;
   }
 `;
 
@@ -38,7 +39,7 @@ export default function Layout({ children }) {
         <GlobalStyles />
         <LayoutStyles>
           <Nav />
-          <BackgroundImage fluid={data.file.childImageSharp.fluid} className="children">    
+          <BackgroundImage style={{ backgroundSize: '100%', backgroundRepeat: 'repeat' }} fluid={data.file.childImageSharp.fluid} className="children">    
             {children}
           </BackgroundImage>
           <Footer />

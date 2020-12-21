@@ -6,22 +6,18 @@ import CloudDownloadIcon from '@material-ui/icons/CloudDownload';
 
 const HomeStyles = styled.div`
     width: 100%;
-    min-height: calc(100vh - 150px);
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     flex: 1;
-    margin-top: 57px;
 
     > * {
         margin: 10px;
     }
 
     .gatsby-image-wrapper {
-        max-width: 170px;
-        width: 100%;
-        height: auto;
         border-radius: 50%;
         border: white 5px solid;
     }
@@ -114,8 +110,8 @@ export default function Home() {
             query {
                 file(relativePath: { eq: "profile.jpg" }) {
                     childImageSharp {
-                        fluid (maxWidth: 200) {
-                        ...GatsbyImageSharpFluid_withWebp
+                        fixed (width: 170) {
+                        ...GatsbyImageSharpFixed_withWebp
                         }
                     }
                 }
@@ -125,9 +121,9 @@ export default function Home() {
 
   return (
     <HomeStyles>
-      <Img fluid={data.file.childImageSharp.fluid} />
+      <Img fixed={data.file.childImageSharp.fixed} />
        <div class="typewriter">
-          <h1>Hello! I'm Peter.</h1>
+          <h1 className="strong">Hello! I'm Peter.</h1>
         </div>
         <p class="profileText">
           I'm a front-end web developer from Melbourne, Australia.
