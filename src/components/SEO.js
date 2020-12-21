@@ -2,12 +2,13 @@ import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
-export default function SEO({ children, location, description, title, image }) {
+export default function SEO() {
   const { site } = useStaticQuery(graphql`
     query {
       site {
         siteMetadata {
           title
+          siteUrl
           description
         }
       }
@@ -15,17 +16,17 @@ export default function SEO({ children, location, description, title, image }) {
   `);
 
   return (
-    <Helmet titleTemplate={site.siteMetadata.title}>
+    <Helmet>
       <html lang="en" />
-      <title>{title}</title>
+      <title>{site.siteMetadata.title}</title>
       <link rel="icon" type="image/png" href="/favicon.png" />
       <link rel="alternate icon" href="/favicon.ico" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta charSet="utf-8" />
       <meta name="description" content={site.siteMetadata.description} />
-      {location && <meta property="og:url" content={location.href} />}
-      <meta property="og:image" content={image || '/favicon.svg'} />
-      <meta property="og:title" content={title} key="ogtitle" />
+      <meta property="og:url" content={site.siteMetadata.siteUrl} />
+      <meta property="og:image" content={'/favicon.png'} />
+      <meta property="og:title" content={site.siteMetadata.title} key="ogtitle" />
       <meta
         property="og:site_name"
         content={site.siteMetadata.title}
@@ -33,10 +34,9 @@ export default function SEO({ children, location, description, title, image }) {
       />
       <meta
         property="og:description"
-        content={description}
+        content={site.siteMetadata.description}
         key="ogdescription"
       />
-      {children}
     </Helmet>
   );
 }
