@@ -1,8 +1,17 @@
 module.exports = {
   siteMetadata: {
-    title: "personal-website",
+    title: `Peter Brandon Hanley`,
+    siteUrl: `https://mrpeterhanley.com/`,
+    description: `Hi! I'm a front-end developer from Melbourne, Australia.`,
+    twitter: `@peterbrandon`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-s3`,
+      options: {
+          bucketName: 'mrpeterhanley.com',
+      },
+    },
     "gatsby-plugin-styled-components",
     {
       resolve: "gatsby-plugin-google-analytics",

@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 import regular from '../fonts/OpenSans-Regular.ttf';
 import semibold from '../fonts/OpenSans-SemiBold.ttf';
-import italic from '../fonts/OpenSans-LightItalic.ttf';
+import italic from '../fonts/OpenSans-Italic.ttf';
 
 const GlobalStyles = createGlobalStyle`
 

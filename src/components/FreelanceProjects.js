@@ -12,6 +12,7 @@ const FreelanceProjectStyles = styled.div`
     align-items: center;
     flex: 1;
     padding-top: 58px;
+    margin-bottom: 100px;
 
     h1 {
       text-align: center;
@@ -94,7 +95,7 @@ export default function FreelanceProjects() {
           title='The ERA Clubhouse'
           image={ImageData.eraClubhouse.childImageSharp.fluid}
           description='Building a mobile responsive image map component that could integrate into an existing WordPress theme'
-          techItems={['Wordpress','JavaScript','CSS Grid','CSS Flex']}
+          techItems={['WordPress','JavaScript','CSS Grid','CSS Flex']}
           webLink={"http://neweramapleridge.com/era-clubhouse/"}
           feedback="Peter was simply amazing. I was super happy with his work and I'm looking forward to working with him again in the close future."
           feedbackLink={"https://www.upwork.com/freelancers/~01c0240618a9b83d7f"}

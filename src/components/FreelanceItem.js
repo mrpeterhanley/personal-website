@@ -5,6 +5,7 @@ import LanguageIcon from '@material-ui/icons/Language';
 import YouTubeIcon from '@material-ui/icons/YouTube';
 import StarIcon from '@material-ui/icons/Star';
 import ProjectTech from './ProjectTech';
+import LinkIcon from '@material-ui/icons/Link';
 
 const FreelanceItemStyles = styled.div`
   display: flex;
@@ -66,6 +67,19 @@ const FreelanceItemStyles = styled.div`
     justify-content: center;
   }
 
+  .feedback {
+    display: grid;
+    width: 100%;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .feedback span {
+    text-decoration: underline;
+  }
+
   .rating {
     display: flex;
     align-items: center;
@@ -93,13 +107,13 @@ export default function FreelanceItem({title, image, description, techItems, web
       <div className="subgrid">
         <ProjectTech techItems={techItems} />
         <div className="links">
-          {videoLink && <a href={videoLink} alt='Video Link'><YouTubeIcon fontSize="large" /></a>}
-          <a href={webLink} alt='Website Link'><LanguageIcon fontSize="large" /></a>
+          {videoLink && <a href={videoLink} alt='Video Link'><YouTubeIcon style={{ fontSize: 40 }} /></a>}
+          <a href={webLink} alt='Website Link'><LanguageIcon style={{ fontSize: 40 }} /></a>
         </div>
       </div>
-      <p>Client Feedback:</p>
-      <p className="italic">"{feedback}"</p>
-      {feedbackLink && <div className="rating"><StarIcon /><StarIcon /><StarIcon /><StarIcon /><StarIcon /> <a href={feedbackLink} alt='Feedback Link'>(link)</a></div>}
+      <div className="feedback"><span>Client Feedback</span> {feedbackLink && <a href={feedbackLink} alt='Feedback Link'><LinkIcon /></a>}</div>
+      <div className="italic">"{feedback}"</div>
+      {feedbackLink && <div className="rating"><StarIcon /><StarIcon /><StarIcon /><StarIcon /><StarIcon /></div>}
     </FreelanceItemStyles>
   )
 }

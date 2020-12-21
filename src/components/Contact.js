@@ -25,6 +25,7 @@ const ContactStyles = styled.div`
     ul {
         list-style: none;
         display: flex;
+        align-items: center;
     }
 
     li {
@@ -49,11 +50,11 @@ export default function Contact() {
           <ul>
             <li>
               <a href="https://www.linkedin.com/in/mrpeterhanley/" alt="Peter's LinkedIn page"
-                ><LinkedInIcon fontSize="large" /></a>
+                ><LinkedInIcon style={{ fontSize: 40 }} /></a>
             </li>
             <li>
               <a href="https://twitter.com/peterbrandon" alt="Peter's Twitter page"
-                ><TwitterIcon fontSize="large" /></a>
+                ><TwitterIcon style={{ fontSize: 40 }} /></a>
             </li>
             <li>
               <a href="https://github.com/mrpeterhanley" alt="Peter's Github page"

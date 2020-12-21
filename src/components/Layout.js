@@ -6,6 +6,7 @@ import BackgroundImage from 'gatsby-background-image'
 import GlobalStyles from "../styles/GlobalStyles";
 import Nav from './Nav';
 import Footer from './Footer'
+import SEO from './SEO';
 
 const LayoutStyles = styled.div`
   display: flex;
@@ -36,6 +37,7 @@ export default function Layout({ children }) {
 
     return (
       <>
+        <SEO />
         <GlobalStyles />
         <LayoutStyles>
           <Nav />

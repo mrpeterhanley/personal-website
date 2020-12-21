@@ -27,6 +27,11 @@ const ProjectItemStyles = styled.div`
       margin: 10px;
   }
 
+  .links {
+    display: flex;
+    align-items: center;
+  }
+
   .links > * {
       margin: 0 5px;
   }
@@ -65,7 +70,7 @@ export default function ProjectItem({title, image, description, techItems, webLi
       <p>{description}</p>
       <ProjectTech techItems={techItems} />
       <div className="links">
-        <a href={webLink} alt='Website Link'><LanguageIcon fontSize="large" /></a>
+        <a href={webLink} alt='Website Link'><LanguageIcon style={{ fontSize: 40 }} /></a>
         <a href={gitHubLink} alt='Github Link'><GitHubIcon fontSize="large" /></a>
       </div>
     </ProjectItemStyles>

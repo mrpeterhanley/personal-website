@@ -12,6 +12,7 @@ const PersonalProjectStyles = styled.div`
     align-items: center;
     flex: 1;
     padding-top: 58px;
+    margin-bottom: 100px;
 
     h1 {
       text-align: center;
@@ -30,6 +31,13 @@ export default function PersonalProjects() {
     graphql`
         query {
             whereInWorld: file(relativePath: { eq: "where-in-world.jpg" }) {
+                childImageSharp {
+                    fluid (maxWidth: 300) {
+                    ...GatsbyImageSharpFluid_withWebp
+                    }
+                }
+            },
+            worldwideWeather: file(relativePath: { eq: "worldwide-weather.jpg" }) {
                 childImageSharp {
                     fluid (maxWidth: 300) {
                     ...GatsbyImageSharpFluid_withWebp
@@ -58,6 +66,14 @@ export default function PersonalProjects() {
     <PersonalProjectStyles id="personalProjects">
       <h1 className="strong">Personal Projects</h1>
       <div className="projectItems">
+      <ProjectItem 
+          title='Worldwide Weather'
+          image={ImageData.worldwideWeather.childImageSharp.fluid}
+          description='Team project - get a current & weekly weather forecast for any city in the world'
+          techItems={['CSS Grid','CSS Flex','Typescript','React','JavaScript','Open Weather API']}
+          webLink={"https://worldwide-weather.netlify.app/"}
+          gitHubLink={"https://github.com/chingu-voyages/v25-geckos-team-04"}
+        />
         <ProjectItem 
           title='Where In The World?'
           image={ImageData.whereInWorld.childImageSharp.fluid}
