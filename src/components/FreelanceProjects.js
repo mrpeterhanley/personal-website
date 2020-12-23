@@ -76,7 +76,7 @@ export default function FreelanceProjects() {
         <FreelanceItem 
           title='Transnet Multilingual'
           image={ImageData.transnetMultilingual.childImageSharp.fluid}
-          description='A mobile responsive website rebuilt from a previous version created with Flash'
+          description='A mobile responsive website rebuilt from an obsolete Flash site'
           techItems={['Gatsby','React','JavaScript','CSS Grid','CSS Flex']}
           webLink={"http://www.transnetmultilingual.ca/"}
           videoLink={"https://youtu.be/SjzkqG0FOCY"}

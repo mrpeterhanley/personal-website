@@ -57,6 +57,13 @@ export default function PersonalProjects() {
                     ...GatsbyImageSharpFluid_withWebp
                     }
                 }
+            },
+            petesPizzas: file(relativePath: { eq: "petes-pizzas.jpg" }) {
+                childImageSharp {
+                    fluid (maxWidth: 300) {
+                    ...GatsbyImageSharpFluid_withWebp
+                    }
+                }
             }
         }
     `
@@ -66,18 +73,26 @@ export default function PersonalProjects() {
     <PersonalProjectStyles id="personalProjects">
       <h1 className="strong">Personal Projects</h1>
       <div className="projectItems">
-      <ProjectItem 
+        <ProjectItem 
           title='Worldwide Weather'
           image={ImageData.worldwideWeather.childImageSharp.fluid}
-          description='Team project - get a current & weekly weather forecast for any city in the world'
+          description='Team project - get a current & weekly weather forecast for any city in the world.'
           techItems={['CSS Grid','CSS Flex','Typescript','React','JavaScript','Open Weather API']}
           webLink={"https://worldwide-weather.netlify.app/"}
           gitHubLink={"https://github.com/chingu-voyages/v25-geckos-team-04"}
         />
         <ProjectItem 
+          title='Petes Pizzas'
+          image={ImageData.petesPizzas.childImageSharp.fluid}
+          description='Solo project - a restaurant website integrated with a headless CMS via GraphQL.'
+          techItems={['Gatsby','React','GraphQL','Sanity.io','Headless CMS','Amazon SES']}
+          webLink={"https://petes-pizzas.netlify.app/"}
+          gitHubLink={"https://github.com/mrpeterhanley/Petes-Pizzas"}
+        />
+        <ProjectItem 
           title='Where In The World?'
           image={ImageData.whereInWorld.childImageSharp.fluid}
-          description='Solo project - a worldwide country information lookup app.'
+          description='Solo project - a global country information lookup application.'
           techItems={['CSS Grid','React','Material UI','JavaScript','3rd Party API']}
           webLink={"https://where-in-world.netlify.app/"}
           gitHubLink={"https://github.com/mrpeterhanley/Where-In-The-World"}
