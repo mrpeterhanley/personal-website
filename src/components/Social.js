@@ -17,18 +17,18 @@ const SocialStyles = styled.div`
         margin: 10px 0;
     }
 
-    h1, p {
+    h1 {
         text-align: center;
     }
 
-    ul {
-        list-style: none;
+    .socialLinks {
         display: flex;
         align-items: center;
-    }
+        text-align: center;
 
-    li {
-        padding: 0 5px;
+        > * {
+            margin: 0 5px;
+        }
     }
 
     a {
@@ -46,17 +46,14 @@ export default function Social() {
   return (
     <SocialStyles id="social">
       <h1 className="strong">Check Out My Latest Activity on Twitter</h1>
-      <p>+ connect with me via LinkedIn / follow me on Github</p>
-      <ul>
-            <li>
-              <a href="https://www.linkedin.com/in/mrpeterhanley/" alt="Peter's LinkedIn page"
+      <div className="socialLinks">
+          <span>& connect with me via</span>
+          <a href="https://www.linkedin.com/in/mrpeterhanley/" alt="Peter's LinkedIn page"
                 ><LinkedInIcon style={{ fontSize: 40 }} /></a>
-            </li>
-            <li>
-              <a href="https://github.com/mrpeterhanley" alt="Peter's Github page"
+          <span>& follow me on</span>
+          <a href="https://github.com/mrpeterhanley" alt="Peter's Github page"
                 ><GitHubIcon fontSize="large" /></a>
-            </li>
-          </ul>
+      </div>
       <Timeline
         dataSource={{
             sourceType: 'profile',
