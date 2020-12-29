@@ -45,14 +45,11 @@ export default function Social() {
   
   return (
     <SocialStyles id="social">
-      <h1 className="strong">Check Out My Latest Activity on Twitter</h1>
+      <h1 className="strong">Check Out My Latest Tweets</h1>
       <div className="socialLinks">
           <span>& connect with me via</span>
           <a href="https://www.linkedin.com/in/mrpeterhanley/" alt="Peter's LinkedIn page"
                 ><LinkedInIcon style={{ fontSize: 40 }} /></a>
-          <span>& follow me on</span>
-          <a href="https://github.com/mrpeterhanley" alt="Peter's Github page"
-                ><GitHubIcon fontSize="large" /></a>
       </div>
       <Timeline
         dataSource={{
