@@ -2,7 +2,6 @@ import React from "react";
 import styled from 'styled-components';
 import { Timeline } from 'react-twitter-widgets';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import GitHubIcon from '@material-ui/icons/GitHub';
 
 const SocialStyles = styled.div`
     width: 100%;
@@ -13,15 +12,12 @@ const SocialStyles = styled.div`
     align-items: center;
     flex: 1;
 
-    > * {
-        margin: 5px 0;
-    }
-
     h1 {
         text-align: center;
     }
 
     .socialLinks {
+        margin-bottom: 5px;
         display: flex;
         align-items: center;
         text-align: center;
@@ -37,6 +33,10 @@ const SocialStyles = styled.div`
 
     a:hover {
         color: goldenrod;
+    }
+
+    @media (max-width: 500px) {
+        padding-top: 45px;
     }
 
 `;
@@ -57,7 +57,7 @@ export default function Social() {
             screenName: 'peterbrandon'
         }}
         options={{
-            height: '450',
+            height: '500',
             width: '800',
             chrome: 'nofooter'
         }}
