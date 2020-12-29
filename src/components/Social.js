@@ -14,7 +14,7 @@ const SocialStyles = styled.div`
     flex: 1;
 
     > * {
-        margin: 10px 0;
+        margin: 5px 0;
     }
 
     h1 {
@@ -27,7 +27,7 @@ const SocialStyles = styled.div`
         text-align: center;
 
         > * {
-            margin: 0 5px;
+            margin: 0 3px;
         }
     }
 
