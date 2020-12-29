@@ -4,6 +4,7 @@ import Home from '../components/Home';
 import Contact from '../components/Contact';
 import PersonalProjects from '../components/PersonalProjects';
 import FreelanceProjects from '../components/FreelanceProjects';
+import Social from '../components/Social';
 
 const IndexPage = () => {
   return (
@@ -11,6 +12,7 @@ const IndexPage = () => {
       <Home />
       <PersonalProjects />
       <FreelanceProjects />
+      <Social />
       <Contact />
     </Layout>
   )
