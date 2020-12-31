@@ -27,7 +27,6 @@ const HomeStyles = styled.div`
         animation: fade-in 1.5s ease-in 3.5s;
         animation-fill-mode: forwards;
         text-align: center;
-        font-size: 1.25rem;
     }
 
     @keyframes fade-in {
@@ -96,14 +95,6 @@ const HomeStyles = styled.div`
         &:hover {
             background-color: goldenrod;
         }
-    }
-
-    @media (max-width: 700px) {
-     
-        .profileText {
-            font-size: 1rem;
-        }
-        
     }
 
     @media (max-width: 350px) {
