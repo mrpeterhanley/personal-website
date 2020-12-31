@@ -32,13 +32,14 @@ const AboutMeStyles = styled.div`
         border-radius: var(--border-radius);
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         justify-content: space-around;
         background-color: rgba(21, 16, 25, 0.5);
+        padding: 10px;
 
         p {
             margin: 10px;
-            text-align: center;
+            text-align: left;
             line-height: 1.4rem;
         }
 
@@ -54,7 +55,6 @@ const AboutMeStyles = styled.div`
     @media (min-width: 1500px) {
         .text {
             padding: 80px 50px;
-            align-items: flex-start;
 
             p {
                 text-align: left;
@@ -62,14 +62,29 @@ const AboutMeStyles = styled.div`
         }
     }
 
-    @media (max-width: 700px) {
+    @media (max-width: 800px) {
         padding-top: 58px;
+
+        .text {
+            align-items: center;
+
+            p {
+              text-align: center;
+            }
+        }
+
         .grid {
             grid-template-columns: 1fr;
 
             > * {
                 margin: 10px;
             }
+        }
+    }
+
+    @media (max-width: 450px) {
+        .text {
+            padding: 0;
         }
     }
 `;
