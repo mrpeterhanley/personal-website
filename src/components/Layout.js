@@ -26,7 +26,7 @@ export default function Layout({ children }) {
           query {
             file(relativePath: { eq: "cool-background.png" }) {
               childImageSharp {
-                fluid(quality: 90, maxWidth: 1920) {
+                fluid(quality: 100, maxWidth: 2400) {
                   ...GatsbyImageSharpFluid_withWebp
                 }
               }
@@ -41,7 +41,7 @@ export default function Layout({ children }) {
         <GlobalStyles />
         <LayoutStyles>
           <Nav />
-          <BackgroundImage style={{ backgroundSize: '100%', backgroundRepeat: 'repeat' }} fluid={data.file.childImageSharp.fluid} className="children">    
+          <BackgroundImage style={{ backgroundSize: '100%', backgroundRepeat: 'repeat', backgroundAttachment: 'fixed' }} fluid={data.file.childImageSharp.fluid} className="children">    
             {children}
           </BackgroundImage>
           <Footer />
