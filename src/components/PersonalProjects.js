@@ -82,7 +82,7 @@ export default function PersonalProjects() {
           gitHubLink={"https://github.com/chingu-voyages/v25-geckos-team-04"}
         />
         <ProjectItem 
-          title='Petes Pizzas'
+          title="Pete's Pizzas"
           image={ImageData.petesPizzas.childImageSharp.fluid}
           description='Solo project - a restaurant website integrated with a headless CMS via GraphQL.'
           techItems={['Gatsby','React','GraphQL','Sanity.io','Headless CMS','Amazon SES']}
