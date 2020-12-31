@@ -1,8 +1,5 @@
 import React from "react";
 import styled from 'styled-components';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import TwitterIcon from '@material-ui/icons/Twitter';
-import GitHubIcon from '@material-ui/icons/GitHub';
 import ContactForm from './ContactForm';
 
 const ContactStyles = styled.div`

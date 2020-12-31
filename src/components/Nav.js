@@ -5,7 +5,6 @@ import HamburgerMenu from 'react-hamburger-menu';
 import HomeIcon from '@material-ui/icons/Home';
 
 const NavStyles = styled.nav`
-
     position: fixed;
     z-index: 2;
     width: 100%;
@@ -28,7 +27,7 @@ const NavStyles = styled.nav`
     }
 
     li:hover {
-        color: var(--blue);
+        color: goldenrod;
     }
 
     a {
@@ -40,7 +39,7 @@ const NavStyles = styled.nav`
         display: none;
     }
 
-    @media (max-width: 700px) {
+    @media (max-width: 900px) {
 
         .hideOnDesktop {
             display: block;
@@ -84,15 +83,17 @@ export default function Nav() {
         </li>
         {menuOpen && <>
         <li onClick={toggleMenu} className="hideOnDesktop"><Link to="/"><HomeIcon /></Link></li>
+        <li onClick={toggleMenu} className="hideOnDesktop"><Link to="/#aboutMe">About Me</Link></li>
         <li onClick={toggleMenu} className="hideOnDesktop"><Link to="/#personalProjects">Personal Projects</Link></li>
         <li onClick={toggleMenu} className="hideOnDesktop"><Link to="/#freelanceProjects">Freelance Projects</Link></li>
-        <li onClick={toggleMenu} className="hideOnDesktop"><Link to="/#social">Social</Link></li>
+        <li onClick={toggleMenu} className="hideOnDesktop"><Link to="/#social">Social Media</Link></li>
         <li onClick={toggleMenu} className="hideOnDesktop"><Link to="/#pageBottom">Contact Me</Link></li>
         </>}
         <li className="hideOnMobile"><Link to="/"><HomeIcon /></Link></li>
+        <li className="hideOnMobile"><Link to="/#aboutMe">About Me</Link></li>
         <li className="hideOnMobile"><Link to="/#personalProjects">Personal Projects</Link></li>
         <li className="hideOnMobile"><Link to="/#freelanceProjects">Freelance Projects</Link></li>
-        <li className="hideOnMobile"><Link to="/#social">Social</Link></li>
+        <li className="hideOnMobile"><Link to="/#social">Social Media</Link></li>
         <li className="hideOnMobile"><Link to="/#pageBottom">Contact Me</Link></li>
       </ul>
     </NavStyles>

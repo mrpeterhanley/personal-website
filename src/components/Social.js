@@ -14,6 +14,7 @@ const SocialStyles = styled.div`
 
     h1 {
         text-align: center;
+        margin-bottom: 5px;
     }
 
     .socialLinks {
