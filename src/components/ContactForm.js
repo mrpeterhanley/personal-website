@@ -6,12 +6,12 @@ const ContactFormStyles = styled.form`
     
     display: flex;
     flex-direction: column;
-    max-width: 400px;
+    max-width: 500px;
     width: 100%;
 
     input,
     textarea {
-        padding: 5px;
+        padding: 7.5px;
         margin: 10px;
         border: 0;
         border-radius: var(--border-radius);

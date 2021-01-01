@@ -98,7 +98,7 @@ export default function PersonalProjects() {
           gitHubLink={"https://github.com/mrpeterhanley/Where-In-The-World"}
         />
         <ProjectItem 
-          title='Rock Scissors Paper'
+          title='Rock Paper Scissors'
           image={ImageData.rockScissorsPaper.childImageSharp.fluid}
           description='Solo project - a modern update on an age-old classic game.'
           techItems={['SCSS','CSS Flex','React','JavaScript','Webpack']}

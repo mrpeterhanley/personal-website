@@ -44,6 +44,10 @@ const GlobalStyles = createGlobalStyle`
     .italic {
         font-family: OpenSans-Italic;
     }
+
+    p {
+        line-height: 1.3rem;
+    }
 `;
 
 export default GlobalStyles;
