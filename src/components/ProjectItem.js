@@ -14,7 +14,7 @@ const ProjectItemStyles = styled.div`
   border-radius: var(--border-radius);
   max-width: 400px;
   width: 100%;
-  background-color: var(--black);
+  background-color: rgba(21, 16, 25, 0.85);
   padding: 10px;
   margin: 10px;
   z-index: 2;
