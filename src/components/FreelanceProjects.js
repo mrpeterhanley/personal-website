@@ -23,6 +23,10 @@ const FreelanceProjectStyles = styled.div`
       flex-wrap: wrap;
       justify-content: center;
     }
+
+    @media (max-width: 900px) {
+        padding-top: 45px;
+    }
 `;
 
 export default function FreelanceProjects() {

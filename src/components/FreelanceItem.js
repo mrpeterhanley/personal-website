@@ -16,9 +16,10 @@ const FreelanceItemStyles = styled.div`
   border-radius: var(--border-radius);
   max-width: 400px;
   width: 100%;
-  background-color: rgba(136, 200, 255, 0.1);
+  background-color: var(--black);
   padding: 10px;
   margin: 10px;
+  z-index: 2;
 
   > * {
       margin: 5px;

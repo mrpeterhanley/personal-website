@@ -8,6 +8,7 @@ const ContactFormStyles = styled.form`
     flex-direction: column;
     max-width: 500px;
     width: 100%;
+    z-index: 2;
 
     input,
     textarea {

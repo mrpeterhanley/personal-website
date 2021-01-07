@@ -17,6 +17,7 @@ const AboutMeStyles = styled.div`
         display: grid;
         width: 100%;
         grid-template-columns: 1fr 1fr;
+        grid-template-rows: 70vh;
 
         > * {
             margin: 0 10px;
@@ -34,8 +35,9 @@ const AboutMeStyles = styled.div`
         flex-direction: column;
         align-items: flex-start;
         justify-content: space-around;
-        background-color: rgba(21, 16, 25, 0.5);
+        background-color: var(--black);
         padding: 10px;
+        z-index: 2;
 
         p {
             margin: 10px;
@@ -61,8 +63,15 @@ const AboutMeStyles = styled.div`
         }
     }
 
+    @media (max-width: 1200px) {
+        padding-top: 45px;
+
+        .grid {
+            grid-template-rows: auto;
+        }
+    }
+
     @media (max-width: 800px) {
-        padding-top: 58px;
 
         .text {
             align-items: center;

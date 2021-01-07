@@ -8,6 +8,7 @@ const FooterStyles = styled.nav`
     text-align: center;
     padding: 10px;
     font-size: 0.8rem;
+    z-index: 3;
 `;
 
 export default function Footer() {

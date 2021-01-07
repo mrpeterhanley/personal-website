@@ -11,7 +11,7 @@ const SocialStyles = styled.div`
     justify-content: center;
     align-items: center;
     flex: 1;
-
+   
     h1 {
         text-align: center;
         margin-bottom: 5px;
@@ -26,6 +26,10 @@ const SocialStyles = styled.div`
         > * {
             margin: 0 3px;
         }
+    }
+
+    .twitter-timeline {
+        z-index: 2;
     }
 
     a {
@@ -52,7 +56,8 @@ export default function Social() {
           <a href="https://www.linkedin.com/in/mrpeterhanley/" alt="Peter's LinkedIn page"
                 ><LinkedInIcon style={{ fontSize: 40 }} /></a>
       </div>
-      <Timeline
+      <div className="twitter-timeline">
+      <Timeline 
         dataSource={{
             sourceType: 'profile',
             screenName: 'peterbrandon'
@@ -63,6 +68,8 @@ export default function Social() {
             chrome: 'nofooter'
         }}
       />
+      </div>
+      
     </SocialStyles>
   )
 }

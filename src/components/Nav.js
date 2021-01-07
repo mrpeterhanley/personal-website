@@ -6,7 +6,7 @@ import HomeIcon from '@material-ui/icons/Home';
 
 const NavStyles = styled.nav`
     position: fixed;
-    z-index: 2;
+    z-index: 3;
     width: 100%;
     background-color: var(--black);
     border-bottom: 5px solid var(--blue);

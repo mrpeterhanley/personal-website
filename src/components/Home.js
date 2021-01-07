@@ -20,6 +20,7 @@ const HomeStyles = styled.div`
     .gatsby-image-wrapper {
         border-radius: 50%;
         border: white 5px solid;
+        z-index: 2;
     }
 
     .profileText {
