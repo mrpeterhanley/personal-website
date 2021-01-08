@@ -28,6 +28,7 @@ const HomeStyles = styled.div`
         animation: fade-in 1.5s ease-in 3.5s;
         animation-fill-mode: forwards;
         text-align: center;
+        z-index: 2;
     }
 
     @keyframes fade-in {
@@ -41,6 +42,7 @@ const HomeStyles = styled.div`
 
     h1 {
         font-size: 2.5rem;
+        z-index: 2;
     }
 
     .typewriter h1 {
@@ -88,6 +90,7 @@ const HomeStyles = styled.div`
         opacity: 0%;
         animation: fade-in 1.5s ease-in 5s;
         animation-fill-mode: forwards;
+        z-index: 2;
         
         > * {
           margin: 0 5px;

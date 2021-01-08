@@ -26,6 +26,7 @@ const AboutMeStyles = styled.div`
 
     .gatsby-image-wrapper {
         border-radius: var(--border-radius);
+        z-index: 2;
     }
 
     .text {
