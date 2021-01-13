@@ -36,7 +36,8 @@ const AboutMeStyles = styled.div`
         flex-direction: column;
         align-items: flex-start;
         justify-content: space-around;
-        background-color: rgba(21, 16, 25, 0.85);
+        background-color: rgba(21, 16, 25, 0.7);
+        backdrop-filter: blur(5px);
         padding: 10px;
         z-index: 2;
 

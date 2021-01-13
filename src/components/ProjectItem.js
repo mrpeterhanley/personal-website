@@ -4,20 +4,20 @@ import Img from "gatsby-image"
 import LanguageIcon from '@material-ui/icons/Language';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import ProjectTech from './ProjectTech';
+import Tilt from 'react-parallax-tilt';
 
 const ProjectItemStyles = styled.div`
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   align-items: center;
-  justify-content: space-between;
+  justify-items: center;
+  grid-template-rows: 50px 165px 80px 70px 70px;
   border: solid 2px white;
   border-radius: var(--border-radius);
   max-width: 400px;
   width: 100%;
-  background-color: rgba(21, 16, 25, 0.85);
+  background-color: rgba(136, 200, 255, 0.15);
   padding: 10px;
-  margin: 10px;
-  z-index: 2;
 
   > * {
       margin: 5px;
@@ -63,6 +63,7 @@ const ProjectItemStyles = styled.div`
 export default function ProjectItem({title, image, description, techItems, webLink, gitHubLink}) {
       
   return (
+    <Tilt className="tilt">
     <ProjectItemStyles>
       <h2 className="strong">{title}</h2>
       <a href={webLink} alt='Website Link'>
@@ -75,5 +76,6 @@ export default function ProjectItem({title, image, description, techItems, webLi
         <a href={gitHubLink} alt='Github Link'><GitHubIcon fontSize="large" /></a>
       </div>
     </ProjectItemStyles>
+    </Tilt>
   )
 }

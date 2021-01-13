@@ -6,20 +6,20 @@ import YouTubeIcon from '@material-ui/icons/YouTube';
 import StarIcon from '@material-ui/icons/Star';
 import ProjectTech from './ProjectTech';
 import LinkIcon from '@material-ui/icons/Link';
+import Tilt from 'react-parallax-tilt';
 
 const FreelanceItemStyles = styled.div`
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   align-items: center;
-  justify-content: space-between;
+  justify-items: center;
+  grid-template-rows: 50px 165px 80px 70px 50px 70px 50px;
   border: solid 2px white;
   border-radius: var(--border-radius);
   max-width: 400px;
   width: 100%;
-  background-color: rgba(21, 16, 25, 0.85);
+  background-color: rgba(136, 200, 255, 0.15);
   padding: 10px;
-  margin: 10px;
-  z-index: 2;
 
   > * {
       margin: 5px;
@@ -99,6 +99,7 @@ const FreelanceItemStyles = styled.div`
 export default function FreelanceItem({title, image, description, techItems, webLink, videoLink, feedback, feedbackLink}) {
       
   return (
+    <Tilt className="tilt">
     <FreelanceItemStyles>
       <h2 className="strong">{title}</h2>
       <a href={webLink} alt='Website Link'>
@@ -116,5 +117,6 @@ export default function FreelanceItem({title, image, description, techItems, web
       <div className="italic">"{feedback}"</div>
       {feedbackLink && <div className="rating"><StarIcon /><StarIcon /><StarIcon /><StarIcon /><StarIcon /></div>}
     </FreelanceItemStyles>
+    </Tilt>
   )
 }

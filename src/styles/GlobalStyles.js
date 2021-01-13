@@ -43,10 +43,17 @@ const GlobalStyles = createGlobalStyle`
 
     .italic {
         font-family: OpenSans-Italic;
+        letter-spacing: 0.02em;
     }
 
     p {
         line-height: 1.3rem;
+    }
+
+    .tilt {
+        z-index: 2;
+        backdrop-filter: blur(5px);
+        margin: 10px;
     }
 `;
 

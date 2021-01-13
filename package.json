@@ -36,6 +36,7 @@
     "react-dom": "^16.13.1",
     "react-hamburger-menu": "^1.2.1",
     "react-helmet": "^6.1.0",
+    "react-parallax-tilt": "^1.4.69",
     "react-particles-js": "^3.4.1",
     "react-twitter-widgets": "^1.9.5",
     "styled-components": "^5.2.1"
