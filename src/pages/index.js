@@ -8,6 +8,7 @@ import FreelanceProjects from '../components/FreelanceProjects';
 import Social from '../components/Social';
 
 const IndexPage = () => {
+
   return (
     <Layout>
       <Home />

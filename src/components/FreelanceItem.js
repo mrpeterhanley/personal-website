@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from 'styled-components';
 import Img from "gatsby-image"
 import LanguageIcon from '@material-ui/icons/Language';
@@ -13,11 +13,10 @@ const FreelanceItemStyles = styled.div`
   grid-template-columns: 1fr;
   align-items: center;
   justify-items: center;
-  grid-template-rows: 50px 165px 80px 70px 50px 70px 50px;
+  grid-template-rows: minmax(50px, auto) auto minmax(80px, auto) minmax(70px, auto) 50px minmax(70px, auto) 50px;
   border: solid 2px white;
   border-radius: var(--border-radius);
   max-width: 400px;
-  width: 100%;
   background-color: rgba(136, 200, 255, 0.15);
   padding: 10px;
 
@@ -97,9 +96,17 @@ const FreelanceItemStyles = styled.div`
 `;
 
 export default function FreelanceItem({title, image, description, techItems, webLink, videoLink, feedback, feedbackLink}) {
+
+  const [tiltEnable, setTiltEnable] = useState(true);
+
+  useEffect(function() {
+      if (window.innerWidth < 750) {
+        setTiltEnable(false);
+      }
+  }, []);
       
   return (
-    <Tilt className="tilt">
+    <Tilt className="tilt" tiltEnable={tiltEnable} >
     <FreelanceItemStyles>
       <h2 className="strong">{title}</h2>
       <a href={webLink} alt='Website Link'>
