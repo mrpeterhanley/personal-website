@@ -13,7 +13,7 @@ const FreelanceItemStyles = styled.div`
   grid-template-columns: 1fr;
   align-items: center;
   justify-items: center;
-  grid-template-rows: minmax(50px, auto) auto minmax(80px, auto) minmax(70px, auto) 50px minmax(70px, auto) 50px;
+  grid-template-rows: 50px 150px 80px 70px 50px 70px 50px;
   border: solid 2px white;
   border-radius: var(--border-radius);
   max-width: 400px;
@@ -92,6 +92,10 @@ const FreelanceItemStyles = styled.div`
 
   .rating a:hover {
     cursor: pointer;
+  }
+
+  @media (max-width: 450px) {
+    grid-template-rows: auto auto auto auto auto auto auto;
   }
 `;
 
