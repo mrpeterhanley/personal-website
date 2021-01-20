@@ -11,7 +11,7 @@ const ProjectItemStyles = styled.div`
   grid-template-columns: 1fr;
   align-items: center;
   justify-items: center;
-  grid-template-rows: 50px 150px 80px 70px 50px;
+  grid-template-rows: 50px 150px 80px 80px 50px;
   border: solid 2px white;
   border-radius: var(--border-radius);
   max-width: 400px;
@@ -19,8 +19,11 @@ const ProjectItemStyles = styled.div`
   padding: 10px;
 
   > * {
-      margin: 5px;
+      margin: 5px 10px;
       text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
   }
 
   h2 {

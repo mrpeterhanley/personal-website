@@ -81,7 +81,7 @@ export default function FreelanceProjects() {
           title='Transnet Multilingual'
           image={ImageData.transnetMultilingual.childImageSharp.fluid}
           description='A mobile responsive website rebuilt from an obsolete Flash site'
-          techItems={['Gatsby','React','JavaScript','CSS Grid','CSS Flex']}
+          techItems={['Styled-Components','Gatsby','React','JavaScript']}
           webLink={"http://www.transnetmultilingual.ca/"}
           videoLink={"https://youtu.be/SjzkqG0FOCY"}
           feedback="Peter delivered exactly as I had requested for my project. Quality work and was done much quicker than expected. Good communication and very responsive. I highly recommend his services!"
@@ -91,7 +91,7 @@ export default function FreelanceProjects() {
           title='Patch Experts'
           image={ImageData.patchExperts.childImageSharp.fluid}
           description='A design proposal for a mobile responsive landing page'
-          techItems={['Gatsby','React','JavaScript','CSS Grid','CSS Flex']}
+          techItems={['Styled-Components','Gatsby','React','JavaScript',]}
           webLink={"https://patch-experts.netlify.app/"}
           feedback="Out of 5 different proposals submitted, the client said this one stood out BY MILES and he’d love to discuss further"
         />
@@ -108,7 +108,7 @@ export default function FreelanceProjects() {
           title='Gyroid.io'
           image={ImageData.gyroid.childImageSharp.fluid}
           description='A mobile responsive landing page based on a PSD design file'
-          techItems={['JavaScript','CSS Grid','CSS Flex','AWS Lambda']}
+          techItems={['JavaScript','AWS Lambda','CSS Grid','CSS Flex']}
           webLink={"http://gyroid.io/"}
           feedback="Peter went above and beyond to make a great website. He finished the task on time, and was responsive and easy to work with."
           feedbackLink={"https://www.upwork.com/freelancers/~01c0240618a9b83d7f"}

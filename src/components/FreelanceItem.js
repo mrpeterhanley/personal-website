@@ -21,8 +21,11 @@ const FreelanceItemStyles = styled.div`
   padding: 10px;
 
   > * {
-      margin: 5px;
+      margin: 5px 10px;
       text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
   }
 
   h2 {
