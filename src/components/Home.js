@@ -132,7 +132,7 @@ export default function Home() {
         <p class="profileText">
           I'm a front-end web developer from Melbourne, Australia.
         </p>
-        <a className="downloadButton" href="/peter-hanley-resume.pdf" alt="Resume PDF">Download My Resume <CloudDownloadIcon /></a>
+        {/* <a className="downloadButton" href="/peter-hanley-resume.pdf" alt="Resume PDF">Download My Resume <CloudDownloadIcon /></a> */}
     </HomeStyles>
   )
 }
