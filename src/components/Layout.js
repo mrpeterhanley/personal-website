@@ -5,7 +5,7 @@ import GlobalStyles from "../styles/GlobalStyles";
 import Nav from './Nav';
 import Footer from './Footer'
 import SEO from './SEO';
-import Particles from 'react-particles-js';
+import Particles from 'react-tsparticles';
 
 const LayoutStyles = styled.div`
   display: flex;
